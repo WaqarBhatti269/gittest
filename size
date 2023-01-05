@@ -1,0 +1,6 @@
+#!/bin/bash
+FILENAME=/var/log/syslog
+FILESIZE=$(stat -c%s "$FILENAME")
+SizeMB=$((FILESIZE / 1048576 ))
+echo "Size of $FILENAME = $FILESIZE bytes."
+echo "Size of $FILENAME = $SizeMB MB."
